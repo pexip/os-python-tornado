@@ -1,0 +1,15 @@
+#!/bin/sh
+set -efu
+
+export ASYNC_TEST_TIMEOUT=30
+
+PYS=${PYS:-"$(py3versions -r 2>/dev/null)"}
+
+cd "$AUTOPKGTEST_TMP"
+# subprocess tests get unexpected output if $HOME/.python_history is not readable
+export HOME=$AUTOPKGTEST_TMP
+
+for py in $PYS; do
+    echo "=== $py ==="
+    $py /usr/lib/python3/dist-packages/tornado/test/runtests.py --verbose 2>&1
+done

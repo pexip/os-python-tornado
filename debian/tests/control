@@ -1,0 +1,6 @@
+Tests: python3
+Depends: python3-all,
+         python3-mock,
+         python3-pycurl,
+         python3-tornado,
+         python3-twisted,

@@ -1,0 +1,25 @@
+From: =?utf-8?b?T25kxZllaiBOb3bDvQ==?= <onovy@debian.org>
+Date: Thu, 2 Apr 2020 09:40:41 +0000
+Subject: Set timeout in test_gc to higher value
+
+Forwarded: not-needed
+---
+ tornado/test/gen_test.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/tornado/test/gen_test.py b/tornado/test/gen_test.py
+index 73c3387..f8373df 100644
+--- a/tornado/test/gen_test.py
++++ b/tornado/test/gen_test.py
+@@ -967,7 +967,10 @@ class RunnerGCTest(AsyncTestCase):
+             self.io_loop.add_callback(callback)
+             yield fut
+ 
+-        yield gen.with_timeout(datetime.timedelta(seconds=0.2), tester())
++        yield gen.with_timeout(
++            datetime.timedelta(seconds=1),
++            tester()
++        )
+ 
+     def test_gc_infinite_coro(self):
+         # GitHub issue 2229: suspended coroutines should be GCed when

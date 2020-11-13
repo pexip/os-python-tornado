@@ -1,0 +1,7 @@
+# examples on how to use google appengine and blogs, communication with the web is expected
+python-tornado-doc binary: privacy-breach-uses-embedded-file
+# examples on how to connect to facebook are expected to connect to the web
+python-tornado-doc: privacy-breach-facebook usr/share/doc/python-tornado-doc/examples/facebook/templates/modules/post.html (//graph.facebook.com/{{ escape(post[)
+# examples, so duplication shouldn't be a problem
+python-tornado-doc: duplicate-files usr/share/doc/python-tornado-doc/examples/chat/static/chat.css usr/share/doc/python-tornado-doc/examples/websocket/static/chat.css
+python-tornado-doc: duplicate-files usr/share/doc/python-tornado-doc/examples/chat/templates/message.html usr/share/doc/python-tornado-doc/examples/websocket/templates/message.html

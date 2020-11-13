@@ -1,0 +1,503 @@
+python-tornado (6.1.0-1) unstable; urgency=medium
+
+  * New upstream version 6.1.0
+  * Rebase patches, drop fix_971108.patch (fixed upstream)
+
+ -- Gordon Ball <gordon@chronitis.net>  Fri, 13 Nov 2020 19:13:45 +0000
+
+python-tornado (6.0.4-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Julien Puydt ]
+  * Update patch headers so lintian doesn't complain.
+  * Update lintian overrides.
+  * Use my @debian.org mail address.
+  * Bump dh compat to 13.
+  * Add upstream patch (Closes: #971108).
+
+ -- Julien Puydt <jpuydt@debian.org>  Tue, 13 Oct 2020 08:08:15 +0200
+
+python-tornado (6.0.4-2) unstable; urgency=medium
+
+  * Add breaks against pcs (<< 0.10.5-1), mitmproxy (<< 5)
+  * Upload to unstable
+
+ -- Gordon Ball <gordon@chronitis.net>  Tue, 12 May 2020 19:07:07 +0000
+
+python-tornado (6.0.4-1) experimental; urgency=medium
+
+  * New upstream release: 6.0.4 (Closes: #939271, again)
+  * Refresh patches:
+     - Applied upstream:
+       + d/p/py38-0001-test-silence-deprecation-warning.patch
+       + d/p/py38-0002-dont-log-CancelledError.patch
+       + d/p/New_test_crt.patch
+     - No longer needed:
+       + d/p/0006-Use-SOURCE_DATE_EPOCH-for-copyright-year-to-make-build-reproducible.patch
+  * Reintroduce dependency on python3-sphinxcontrib-asyncio
+  * Update to Standards-Version 4.5.0
+  * Declare Rules-Requires-Root: no
+
+ -- Gordon Ball <gordon@chronitis.net>  Wed, 29 Apr 2020 13:19:45 +0000
+
+python-tornado (6.0.3+really5.1.1-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Use secure URI in Homepage field.
+  * Bump debhelper from old 11 to 12.
+  * Remove obsolete field Name from debian/upstream/metadata (already
+    present in machine-readable debian/copyright).
+
+  [ Sandro Tosi ]
+  * Drop python2 support; Closes: #938220
+
+ -- Sandro Tosi <morph@debian.org>  Wed, 01 Apr 2020 16:42:59 -0400
+
+python-tornado (6.0.3+really5.1.1-2) unstable; urgency=medium
+
+  * Applied patches from Ubuntu to fix Python 3.8 FTBFS:
+    - d/p/py38-0001-test-silence-deprecation-warning.patch
+    - d/p/py38-0002-dont-log-CancelledError.patch: Cherry-picked from upstream
+      master to fix issues detected by failing py38 tests.
+    (Closes: #945222)
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 22 Nov 2019 09:16:53 +0100
+
+python-tornado (6.0.3+really5.1.1-1) unstable; urgency=medium
+
+  * Re-upload old version so deps can follow.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sun, 20 Oct 2019 10:45:08 +0200
+
+python-tornado (6.0.3-1) unstable; urgency=medium
+
+  [ Michael Hudson-Doyle ]
+  * Bump ASYNC_TEST_TIMEOUT when running the autopkgtests as well.
+
+  [ Gianfranco Costamagna ]
+  * Commit Ubuntu delta in Debian packaging repo
+
+  [ Julien Puydt ]
+  * New upstream release 6.0.3 (Closes: #939271)
+  * Bump std-vers to 4.4.0.
+  * Update patches (and drop those upstreamed [new CRT and reproducible]).
+  * Adapt to upstream only supporting Python 3 (Closes: #938220)
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+  * Bump Standards-Version to 4.4.1.
+
+  [ Julien Puydt ]
+  * Add python3-sphinxcontrib-asyncio as new build-dep.
+  * Use my debian.org mail address.
+  * Update lintian overrides.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sat, 19 Oct 2019 22:48:34 +0200
+
+python-tornado (5.1.1-4) unstable; urgency=medium
+
+  * d/patches/0007-Higher-test_gc-timeout.patch: Added, fixies FTBS on mipsel
+
+ -- Ondřej Nový <onovy@debian.org>  Sat, 26 Jan 2019 13:15:05 +0100
+
+python-tornado (5.1.1-3) unstable; urgency=medium
+
+  * Set TRAVIS env variable to "true"
+  * Use SOURCE_DATE_EPOCH for copyright year to make build reproducible
+  * Bump Standards-Version to 4.3.0 (no changes)
+
+ -- Ondřej Nový <onovy@debian.org>  Tue, 22 Jan 2019 17:24:12 +0100
+
+python-tornado (5.1.1-2) unstable; urgency=medium
+
+  * Set ASYNC_TEST_TIMEOUT to higher value to prevent test failing
+    on slower archs during build
+
+ -- Ondřej Nový <onovy@debian.org>  Sat, 29 Sep 2018 17:34:36 +0200
+
+python-tornado (5.1.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/tests: Use AUTOPKGTEST_TMP instead of ADTTMP
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+  * Rebase patches, drop sockopt.patch (applied upstream)
+  * Regenerate test crt, newer OpenSSL require at least RSA 2048bit
+  * d/p/skip-timing-tests.patch:
+    Drop and set TRAVIS+NO_NETWORK envs in d/rules instead
+  * Add upstream metadata
+  * Standards version is 4.2.1 now (no changes)
+
+ -- Ondřej Nový <onovy@debian.org>  Sat, 29 Sep 2018 16:15:02 +0200
+
+python-tornado (5.0.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Breaks python{,3}-zmq (<< 17.0.0-1~), because we need patch
+    from -1 Debian version
+  * Bump std-ver to 4.1.4 (no changes needed)
+
+ -- Ondřej Nový <onovy@debian.org>  Wed, 11 Apr 2018 16:31:50 +0200
+
+python-tornado (5.0.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Add Breaks: python{,3}-zmq (<< 17) (Closes: #893360)
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Wed, 21 Mar 2018 08:54:46 +0100
+
+python-tornado (5.0.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+
+  [ Julien Puydt ]
+  * New upstream release.
+  * Refresh patches.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Tue, 13 Mar 2018 23:55:49 +0100
+
+python-tornado (4.5.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump std-ver to 4.1.3 (no changes needed)
+  * Push dh compat to 11
+  * d/copyright: Bump my copyright year
+  * Move docs and examples into /usr/share/python-tornado
+  * Override wrong-section-according-to-package-name for python3-tornado too
+
+ -- Ondřej Nový <onovy@debian.org>  Mon, 15 Jan 2018 14:02:11 +0100
+
+python-tornado (4.5.2-1) unstable; urgency=medium
+
+  [ Julien Puydt ]
+  * New upstream release.
+  * Bump d/watch to version 4.
+  * d/control: Remove Testsuite: autopkgtest, it's not needed
+
+  [ Ondřej Nový ]
+  * Bump std-ver to 4.1.1.
+
+ -- Ondřej Nový <onovy@debian.org>  Tue, 31 Oct 2017 21:26:31 +0100
+
+python-tornado (4.5.1-2) unstable; urgency=medium
+
+  * Uploading to unstable
+
+ -- Ondřej Nový <onovy@debian.org>  Tue, 20 Jun 2017 19:29:13 +0200
+
+python-tornado (4.5.1-1) experimental; urgency=medium
+
+  * New upstream release
+  * d/copyright
+    - Bump my copyright year
+    - Adjust for new upstream release
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 12 May 2017 16:23:50 +0200
+
+python-tornado (4.4.3-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+  * No longer disable PIE during build
+
+ -- Ondřej Nový <onovy@debian.org>  Thu, 13 Apr 2017 14:57:17 +0200
+
+python-tornado (4.4.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Push dh compat to 10.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Fri, 07 Oct 2016 15:58:20 +0200
+
+python-tornado (4.4.1-2) unstable; urgency=medium
+
+  * Prevent internet access during build (Closes: #833351)
+    - Use local objects.inv for intersphinx mapping
+    - Skip domain resolving tests
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 05 Aug 2016 15:20:50 +0200
+
+python-tornado (4.4.1-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #830859)
+  * Rearranged lintian overrides for new release
+  * Added myself as uploader
+  * Removed python-simplejson and python-multiprocessing from B-D/R,
+    because Python < 2.6 is not supported anymore (Closes: #826455)
+  * Moved python-mysqldb from Recommends to Suggests, it's only used in demo
+  * Moved python{3,}-pycurl from Depends to Suggests, it's not strictly needed
+    and added to B-D to run related unit tests
+  * Added python-concurrent.futures to Build-Depends and Recommends
+  * Added python{3,}-twisted to Build-Depends and Suggests
+  * Added python{3,}-mock to Build-Depends
+  * d/copyright: Added myself to Debian part
+  * Package description changed to upstream (newer) version
+  * Rearranged Debian tests Depends to Build-Depends
+  * Run Py3 unit tests during build and enable verbose mode
+  * Bumped required Python version to 2.7 and 3.3
+  * Added python-tornado-doc package with docs and examples
+  * Enabled all but PIE hardening
+  * Generate upstream changelog file during build
+  * Added python3-backports-abc to B-D for older Python 3
+
+ -- Ondřej Nový <onovy@debian.org>  Mon, 01 Aug 2016 16:48:24 +0200
+
+python-tornado (4.3.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Team upload
+  * Added Build-Depends to dh-python and python-setuptools
+  * Added ${shlibs:Depends} and removed lintian override for libc
+  * Lintian tag rename:
+    privacy-breach-may-use-debian-package -> privacy-breach-uses-embedded-file
+
+  [ Gianfranco Costamagna, Ondřej Nový ]
+  * debian/patches/0007-Fix-testsuite-failure-when-sockets-is-not-defined.patch:
+    fix testsuite when sockets is not defined.
+    - https://github.com/tornadoweb/tornado/pull/1725
+
+ -- Ondřej Nový <novy@ondrej.org>  Tue, 24 May 2016 11:25:26 +0200
+
+python-tornado (4.3.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refreshed patches (and dropped the Python 3.5 patch -- gone upstream).
+  * Added dep on singledispatch and backports_abc.
+  * Added lintian override for the facebook example (not a privacy breach)
+  * Added lintian overrides for sample.xml compressed versions.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sat, 21 May 2016 21:57:17 +0000
+
+python-tornado (4.2.1-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ SVN-Git Migration ]
+  * git-dpm config.
+  * Update Vcs fields for git migration.
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https).
+
+  [ Mattia Rizzolo ]
+  * Add a patch to skip failing test and fix ftbfs on hurd.
+  * Bump Standards-Version to 3.9.8, no changes needed.
+  * Bump debhelper compat level to 9.
+  * Build using pybuild.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Thu, 28 Apr 2016 08:45:36 +0000
+
+python-tornado (4.2.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * debian/patches/python35-compat.patch: Python 3.5 compatibility fixes
+    pulled from upstream.
+  * debian/tests/control: Remove an obsolete comment.
+
+ -- Barry Warsaw <barry@debian.org>  Tue, 18 Aug 2015 16:04:34 -0400
+
+python-tornado (4.2.0-1) unstable; urgency=medium
+
+  * Update to latest upstream (Closes: #779035)
+  * Remove patches/certs-path.patch and ignore-ca-certificates.patch
+    (now useless).
+  * Refresh all other patches.
+  * Add patches/without-certifi.patch so we directly look where we
+    know the certs are.
+  * Push standards-version up.
+  * Add ca-certificates as a build-dep so tests pass.
+  * Add myself as uploaders.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Mon, 22 Jun 2015 11:24:38 +0200
+
+python-tornado (3.2.2-1.1) unstable; urgency=medium
+
+  * Non-Maintainer Upload.
+  * patches/sockopt.patch: New patch to ignore ENOPROTOOPT errors from
+    SO_REUSEADDR or SO_ERROR on AF_UNIX sockets, for systems which do not
+    implement them there. Thanks Svante Signell for the patch. (Closes: #748903)
+
+ -- Samuel Thibault <sthibault@debian.org>  Sat, 25 Oct 2014 21:14:45 +0200
+
+python-tornado (3.2.2-1) unstable; urgency=medium
+
+  * New upstream release
+    - update watchfile to new location
+  * skip-timing-tests.patch:
+    skip tests that need fast machines (Closes: #751343)
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Mon, 19 May 2014 21:42:13 +0200
+
+python-tornado (3.2.0-1) unstable; urgency=medium
+
+  * New upstream release
+    - now arch: any package with binary extension for faster websockets
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 23 Feb 2014 20:16:37 +0100
+
+python-tornado (3.1.1-1) unstable; urgency=low
+
+  * New upstream release
+    - fixes localhost binding on disabled network (Closes: #711806)
+  * drop upstream applied random-port.patch and CVE-2013-2099.patch
+  * bump standard to 3.9.5 no changes required
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 03 Nov 2013 18:48:51 +0100
+
+python-tornado (2.4.1-3) unstable; urgency=low
+
+  * Team upload.
+
+  [ Jakub Wilk ]
+  * Run tests only if DEB_BUILD_OPTIONS=nocheck is not set.
+
+  [ Andrew Starr-Bochicchio ]
+  * Backport fix for CVE 2013-2009. Avoid allowing multiple
+    wildcards in a single SSL cert hostname segment (Closes: #709069).
+
+ -- Andrew Starr-Bochicchio <asb@debian.org>  Fri, 04 Oct 2013 19:18:05 -0400
+
+python-tornado (2.4.1-2) unstable; urgency=low
+
+  [ Julian Taylor ]
+  * upload to unstable
+  * debian/rules: replace PWD with CURDIR
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Thu, 09 May 2013 20:08:11 +0200
+
+python-tornado (2.4.1-1) experimental; urgency=low
+
+  * New upstream release (Closes: #698566)
+  * run python2 test during build (Closes: #663928)
+  * add autopkgtests
+  * ignoreuserwarning.patch:
+    disable warning in test to allow testing with the package already installed
+  * bump standards to 3.9.4, no changes required
+  * random-port.patch: get a random free port for tests
+  * don't compress example python files
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Wed, 23 Jan 2013 20:26:46 +0100
+
+python-tornado (2.3-2) unstable; urgency=low
+
+  * debian/control
+    - Replaced the python3.2 in the Depends field of python3-tornado
+      by $(python3:Depends)
+  * Renamed python-tornado.examples to examples
+  * Removed python3-tornado.examples
+
+ -- Carl Chenet <chaica@debian.org>  Sun, 10 Jun 2012 01:26:50 +0200
+
+python-tornado (2.3-1) unstable; urgency=low
+
+  [ Julian Taylor ]
+  * Team upload
+  * new upstream release
+    - change debian/watch to download section instead of tag tarballs
+      tag tarball contain lots of unnecessary website and test data
+    - drop upstream applied CVE-2012-2374.patch
+    - refresh patches
+    - closes LP: #998615
+  [ Carl Chenet]
+  * debian/control
+    - Replaced chaica@ohmytux.com by chaica@debian.org
+    - Replace (python3:Depends) in python3-tornado Depends field
+      because of https://github.com/facebook/tornado/issues/450
+    - Modified the short description of python3-tornado package
+  * Renamed examples to python-tornado.examples
+  * Added python3-tornado.examples
+
+ -- Carl Chenet <chaica@debian.org>  Sun, 10 Jun 2012 00:12:24 +0200
+
+python-tornado (2.1.0-3) unstable; urgency=high
+
+  [ Julian Taylor ]
+  * Team upload
+  * bump X-Python-Version to >= 2.6
+    lower versions require arch any for custom epoll extension
+  * move to Section: web (Closes: #665854)
+    - override lintian wrong-section-according-to-package-name
+  * CVE-2012-2374.patch adopted from upstream's GIT (Closes: #673987)
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Tue, 22 May 2012 19:11:51 -0400
+
+python-tornado (2.1.0-2) unstable; urgency=low
+
+  [ Thomas Kluyver ]
+  * Package for Python 3 (Closes: #653643)
+
+  [ Julian Taylor ]
+  * make packages arch all
+  * debian/control
+    - wrap-and-sort fields
+  * remove unnecessary Dependencies and Breaks
+  * convert copyright to dep5
+  * bump standard to 3.9.3 (no changes)
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Tue, 13 Mar 2012 18:08:33 -0400
+
+python-tornado (2.1.0-1) unstable; urgency=low
+
+  * Team upload
+  * New upstream release (Closes: #636602)
+  * Refreshed patches
+  * Updated debian/copyright
+  * Added myself to uploaders to have bugs closed with uploads
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Wed, 21 Sep 2011 19:58:11 -0400
+
+python-tornado (1.2.1-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control
+    - Bump Standards-Version to 3.9.2
+
+ -- Carl Chenet <chaica@ohmytux.com>  Mon, 09 May 2011 16:56:04 +0200
+
+python-tornado (1.2.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added debian/examples
+  * Added patch to ignore ca-certificates.crt from sources
+  * Added patch to look for ca-certificates.crt at the right place
+  * debian/copyright
+    - Added copyrights and license for some files
+    - some files no more in the upstream sources
+  * debian/control
+    - Removed python-support
+    - Replaced XS-Python-Version by X-Python-Version
+    - Added Breaks: ${python:Breaks}
+    - Added Recommends: python (>= 2.6) | python-multiprocessing
+    - Added Depends: ca-certificates
+  * debian/rules
+    - Replaced dh $@ by dh $@ --with python2
+  * debian/watch
+    - fixed the path
+
+ -- Carl Chenet <chaica@ohmytux.com>  Tue, 01 Mar 2011 02:38:06 +0100
+
+python-tornado (1.0.1-1) unstable; urgency=low
+
+  * Team upload
+  * New upstream release
+  * Standards-Version bumped to 3.9.1 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 22 Aug 2010 15:14:57 +0200
+
+python-tornado (0.2-1) unstable; urgency=low
+
+  * Initial release. (Closes: #551520)
+
+ -- Carl Chenet <chaica@ohmytux.com>  Sat, 20 Mar 2010 17:38:45 +0100

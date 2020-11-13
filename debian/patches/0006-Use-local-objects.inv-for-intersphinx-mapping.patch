@@ -1,0 +1,24 @@
+From: =?utf-8?b?T25kxZllaiBOb3bDvQ==?= <onovy@debian.org>
+Date: Wed, 3 Aug 2016 19:02:48 +0200
+Subject: Use local objects.inv for intersphinx mapping
+
+Forwarded: Debian-specific
+---
+ docs/conf.py | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/docs/conf.py b/docs/conf.py
+index f0cfa9c..a475ebc 100644
+--- a/docs/conf.py
++++ b/docs/conf.py
+@@ -81,7 +81,9 @@ latex_documents = [
+     )
+ ]
+ 
+-intersphinx_mapping = {"python": ("https://docs.python.org/3.6/", None)}
++intersphinx_mapping = {
++    'python': ('/usr/share/doc/python3-doc/html', None),
++}
+ 
+ on_rtd = os.environ.get("READTHEDOCS", None) == "True"
+ 
