@@ -1,14 +1,15 @@
 Source: python-tornado
 Section: web
 Priority: optional
-Maintainer: Debian Python Team <team+python@tracker.debian.org>
-Uploaders: Carl Chenet <chaica@debian.org>,
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Debian Python Team <team+python@tracker.debian.org>
+XSBC-Pexip-Original-Uploaders: Carl Chenet <chaica@debian.org>,
            Yaroslav Halchenko <debian@onerussian.com>,
            Julian Taylor <jtaylor.debian@googlemail.com>,
            Julien Puydt <jpuydt@debian.org>,
            Ondřej Nový <onovy@debian.org>,
 Build-Depends: ca-certificates,
-               debhelper-compat (= 13),
+               debhelper-compat (= 12),
                dh-python,
                python3-all-dev,
                python3-doc,
@@ -25,6 +26,7 @@ Homepage: https://www.tornadoweb.org/
 Vcs-Git: https://salsa.debian.org/python-team/packages/python-tornado.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/python-tornado
 Rules-Requires-Root: no
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ bullseye
 
 Package: python3-tornado
 Architecture: any
