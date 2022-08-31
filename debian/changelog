@@ -1,3 +1,9 @@
+python-tornado (6.1.0-1pexip3) pexip-bullseye; urgency=medium
+
+  * Fix up deprecated twisted use in test case.
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Wed, 31 Aug 2022 13:43:54 +0100
+
 python-tornado (6.1.0-1pexip2) pexip-bullseye; urgency=medium
 
   * Rebuild for bullseye.

@@ -1,0 +1,21 @@
+--- a/tornado/test/twisted_test.py
++++ b/tornado/test/twisted_test.py
+@@ -30,8 +30,7 @@
+ try:
+     from twisted.internet.defer import (  # type: ignore
+         Deferred,
+-        inlineCallbacks,
+-        returnValue,
++        inlineCallbacks
+     )
+     from twisted.internet.protocol import Protocol  # type: ignore
+     from twisted.internet.asyncioreactor import AsyncioSelectorReactor  # type: ignore
+@@ -226,7 +225,7 @@
+                 # inlineCallbacks doesn't work with regular functions;
+                 # must have a yield even if it's unreachable.
+                 yield
+-            returnValue(42)
++            return 42
+ 
+         res = yield fn()
+         self.assertEqual(res, 42)
