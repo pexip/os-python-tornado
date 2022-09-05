@@ -1,3 +1,9 @@
+python-tornado (6.1.0-1pexip4) pexip-bullseye; urgency=medium
+
+  * Bullseye rebuild for ARM64 inclusion
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Mon, 05 Sep 2022 10:35:42 +0100
+
 python-tornado (6.1.0-1pexip3) pexip-bullseye; urgency=medium
 
   * Fix up deprecated twisted use in test case.
