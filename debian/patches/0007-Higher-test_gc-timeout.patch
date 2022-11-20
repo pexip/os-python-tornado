@@ -7,11 +7,9 @@ Forwarded: not-needed
  tornado/test/gen_test.py | 5 ++++-
  1 file changed, 4 insertions(+), 1 deletion(-)
 
-diff --git a/tornado/test/gen_test.py b/tornado/test/gen_test.py
-index 73c3387..f8373df 100644
---- a/tornado/test/gen_test.py
-+++ b/tornado/test/gen_test.py
-@@ -967,7 +967,10 @@ class RunnerGCTest(AsyncTestCase):
+--- python-tornado.orig/tornado/test/gen_test.py
++++ python-tornado/tornado/test/gen_test.py
+@@ -967,7 +967,10 @@
              self.io_loop.add_callback(callback)
              yield fut
  

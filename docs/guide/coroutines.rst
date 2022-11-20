@@ -6,7 +6,7 @@ Coroutines
    from tornado import gen
 
 **Coroutines** are the recommended way to write asynchronous code in
-Tornado. Coroutines use the Python ``await`` or ``yield`` keyword to
+Tornado. Coroutines use the Python ``await`` keyword to
 suspend and resume execution instead of a chain of callbacks
 (cooperative lightweight threads as seen in frameworks like `gevent
 <http://www.gevent.org>`_ are sometimes called coroutines as well, but
@@ -232,11 +232,11 @@ immediately, so you can start another operation before waiting.
         # This is equivalent to asyncio.ensure_future() (both work in Tornado).
         fetch_future = convert_yielded(self.fetch_next_chunk())
         while True:
-            chunk = yield fetch_future
+            chunk = await fetch_future
             if chunk is None: break
             self.write(chunk)
             fetch_future = convert_yielded(self.fetch_next_chunk())
-            yield self.flush()
+            await self.flush()
 
 .. testoutput::
    :hide:
@@ -281,7 +281,7 @@ loop condition from accessing the results, as in this example from
 Running in the background
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`.PeriodicCallback` is not normally used with coroutines. Instead, a
+As an alternative to `.PeriodicCallback`, a
 coroutine can contain a ``while True:`` loop and use
 `tornado.gen.sleep`::
 

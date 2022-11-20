@@ -1,3 +1,47 @@
+python-tornado (6.2.0-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + python-tornado-doc: Add Multi-Arch: foreign.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sun, 20 Nov 2022 12:24:11 +0000
+
+python-tornado (6.2.0-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + python3-tornado: Drop versioned constraint on python3-zmq in Breaks.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Mon, 17 Oct 2022 02:43:30 +0100
+
+python-tornado (6.2.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump standards-version to 4.6.1.
+  * Refresh patches.
+  * Run tests for all supported Python 3 versions.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sun, 10 Jul 2022 23:08:31 +0200
+
+python-tornado (6.1.0-3) unstable; urgency=medium
+
+  * Drop a dead link. (Closes: #988772)
+  * Add a patch replace_deprecated_unittest_aliases.patch.
+  * Bump standards-version to 4.6.0.
+  * Refresh lintian overrides.
+
+ -- Julien Puydt <jpuydt@debian.org>  Fri, 03 Dec 2021 09:57:21 +0100
+
+python-tornado (6.1.0-2) unstable; urgency=medium
+
+  [ Stefano Rivera ]
+  * Team upload.
+  * Patch: Ignore known DeprecationWarnings in Python 3.10 (Closes: #1000287)
+
+  [ Debian Janitor ]
+  * Update standards version to 4.5.1, no changes needed.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 20 Nov 2021 22:10:29 -0400
+
 python-tornado (6.1.0-1) unstable; urgency=medium
 
   * New upstream version 6.1.0
