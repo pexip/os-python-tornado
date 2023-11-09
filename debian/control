@@ -23,7 +23,7 @@ Homepage: https://www.tornadoweb.org/
 Vcs-Git: https://salsa.debian.org/python-team/packages/python-tornado.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/python-tornado
 Rules-Requires-Root: no
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ bullseye
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bookworm
 
 Package: python3-tornado
 Architecture: any
