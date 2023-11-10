@@ -15,6 +15,7 @@
 # under the License.
 
 import aiopg
+import asyncio
 import bcrypt
 import markdown
 import os.path
@@ -68,7 +69,7 @@ class Application(tornado.web.Application):
             (r"/auth/logout", AuthLogoutHandler),
         ]
         settings = dict(
-            blog_title=u"Tornado Blog",
+            blog_title="Tornado Blog",
             template_path=os.path.join(os.path.dirname(__file__), "templates"),
             static_path=os.path.join(os.path.dirname(__file__), "static"),
             ui_modules={"Entry": EntryModule},
@@ -313,4 +314,4 @@ async def main():
 
 
 if __name__ == "__main__":
-    tornado.ioloop.IOLoop.current().run_sync(main)
+    asyncio.run(main())
