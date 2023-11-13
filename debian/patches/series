@@ -5,3 +5,4 @@ fix-ftbfs-on-hurd.patch
 0007-Higher-test_gc-timeout.patch
 disable-privilege-port-test.diff
 pexip_fixup_deprecated_twisted.diff
+ignore-py310-deprecation-warnings.patch

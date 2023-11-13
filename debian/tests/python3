@@ -3,7 +3,7 @@ set -efu
 
 export ASYNC_TEST_TIMEOUT=30
 
-PYS=${PYS:-"$(py3versions -r 2>/dev/null)"}
+PYS=${PYS:-"$(py3versions -s 2>/dev/null)"}
 
 cd "$AUTOPKGTEST_TMP"
 # subprocess tests get unexpected output if $HOME/.python_history is not readable

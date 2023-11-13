@@ -1,0 +1,36 @@
+From: Stefano Rivera <stefanor@debian.org>
+Date: Sat, 20 Nov 2021 21:38:30 -0400
+Subject: Ignore known DeprecationWarnings under Python 3.10
+
+Python 3.10 triggers several DeprecationWarnings that haven't been
+resolved yet, upstream. There are going to be API changes required and
+they haven't been decided on, yet.
+
+Bug-Upstream: https://github.com/tornadoweb/tornado/issues/3033
+Bug-Debian: https://bugs.debian.org/1000287
+Forwarded: not-needed
+---
+ tornado/test/runtests.py | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+--- python-tornado.orig/tornado/test/runtests.py
++++ python-tornado/tornado/test/runtests.py
+@@ -160,6 +160,18 @@
+         category=DeprecationWarning,
+         message="PY_SSIZE_T_CLEAN will be required",
+     )
++    warnings.filterwarnings(
++        "ignore", category=DeprecationWarning,
++        message="There is no current event loop")
++    warnings.filterwarnings(
++        "ignore", category=DeprecationWarning,
++        message="ssl\.PROTOCOL_TLS is deprecated")
++    warnings.filterwarnings(
++        "ignore", category=DeprecationWarning,
++        message="ssl\.wrap_socket\(\) is deprecated, .*")
++    warnings.filterwarnings(
++        "ignore", category=DeprecationWarning,
++        message="ssl\.OP_NO_SSL\*/ssl\.OP_NO_TLS\* options are deprecated")
+ 
+     logging.getLogger("tornado.access").setLevel(logging.CRITICAL)
+ 
