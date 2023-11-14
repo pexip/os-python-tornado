@@ -1,16 +1,18 @@
---- a/tornado/test/twisted_test.py
-+++ b/tornado/test/twisted_test.py
-@@ -30,8 +30,7 @@
+Index: os-python-tornado/tornado/test/twisted_test.py
+===================================================================
+--- os-python-tornado.orig/tornado/test/twisted_test.py
++++ os-python-tornado/tornado/test/twisted_test.py
+@@ -19,8 +19,7 @@ from tornado.testing import AsyncTestCas
+ 
  try:
      from twisted.internet.defer import (  # type: ignore
-         Deferred,
 -        inlineCallbacks,
 -        returnValue,
 +        inlineCallbacks
      )
-     from twisted.internet.protocol import Protocol  # type: ignore
-     from twisted.internet.asyncioreactor import AsyncioSelectorReactor  # type: ignore
-@@ -226,7 +225,7 @@
+ 
+     have_twisted = True
+@@ -43,7 +42,7 @@ class ConvertDeferredTest(AsyncTestCase)
                  # inlineCallbacks doesn't work with regular functions;
                  # must have a yield even if it's unreachable.
                  yield
