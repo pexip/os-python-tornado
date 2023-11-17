@@ -1,12 +1,14 @@
 Disable testing privilege port binding
---- a/tornado/test/tcpclient_test.py
-+++ b/tornado/test/tcpclient_test.py
-@@ -152,7 +152,7 @@
-         """
+Index: os-python-tornado/tornado/test/tcpclient_test.py
+===================================================================
+--- os-python-tornado.orig/tornado/test/tcpclient_test.py
++++ os-python-tornado/tornado/test/tcpclient_test.py
+@@ -150,7 +150,7 @@ class TCPClientTest(AsyncTestCase):
+         """Success when trying to use the source IP Address '127.0.0.1'."""
          self.do_test_connect(socket.AF_INET, "127.0.0.1", source_ip="127.0.0.1")
  
 -    @skipIfNonUnix
 +    @unittest.skip("build env can bind privilege ports")
      def test_source_port_fail(self):
-         """Fail when trying to use source port 1.
-         """
+         """Fail when trying to use source port 1."""
+         if getpass.getuser() == "root":
