@@ -1,3 +1,9 @@
+python-tornado (6.1.0-1pexip7) pexip; urgency=medium
+
+  * t/w/RequestHandler: catch asyncio.CancelledError in _execute
+
+ -- Huw Jones <huw@pexip.com>  Tue, 09 Jan 2024 16:05:46 +0000
+
 python-tornado (6.1.0-1pexip6) pexip; urgency=medium
 
   * No-change rebuild
