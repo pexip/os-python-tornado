@@ -1,3 +1,9 @@
+python-tornado (6.2.0-3pexip3) pexip-bookworm; urgency=medium
+
+  * t/w/RequestHandler: catch asyncio.CancelledError in _execute
+
+ -- Huw Jones <huw@pexip.com>  Tue, 09 Jan 2024 16:05:46 +0000
+
 python-tornado (6.2.0-3pexip2) pexip-bookworm; urgency=medium
 
   * Bookworm build for product distribution

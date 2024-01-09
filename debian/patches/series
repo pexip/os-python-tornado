@@ -6,3 +6,4 @@ fix-ftbfs-on-hurd.patch
 disable-privilege-port-test.diff
 pexip_fixup_deprecated_twisted.diff
 ignore-py310-deprecation-warnings.patch
+pexip_asyncio_cancelled.patch
