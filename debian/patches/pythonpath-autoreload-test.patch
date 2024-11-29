@@ -1,0 +1,23 @@
+From: Stefano Rivera <stefano@rivera.za.net>
+Date: Sun, 21 Jan 2024 15:55:16 -0400
+Subject: autoreload_test: Handle a relative PYTHONPATH
+
+This came up in the Debian package build of tornado, where we run the
+tests from a staged build of the module.
+
+Forwarded: https://github.com/tornadoweb/tornado/pull/3358
+---
+ tornado/test/autoreload_test.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- python-tornado.orig/tornado/test/autoreload_test.py
++++ python-tornado/tornado/test/autoreload_test.py
+@@ -75,7 +75,7 @@
+         # application
+         pythonpath = os.getcwd()
+         if "PYTHONPATH" in os.environ:
+-            pythonpath += os.pathsep + os.environ["PYTHONPATH"]
++            pythonpath += os.pathsep + os.path.join(os.getcwd(), os.environ["PYTHONPATH"])
+ 
+         p = Popen(
+             args,

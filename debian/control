@@ -6,21 +6,18 @@ Uploaders: Carl Chenet <chaica@debian.org>,
            Yaroslav Halchenko <debian@onerussian.com>,
            Julian Taylor <jtaylor.debian@googlemail.com>,
            Julien Puydt <jpuydt@debian.org>,
-           Ondřej Nový <onovy@debian.org>,
 Build-Depends: ca-certificates,
                debhelper-compat (= 13),
                dh-python,
                python3-all-dev,
                python3-doc,
-               python3-mock,
                python3-pycurl,
                python3-setuptools,
-               python3-singledispatch,
                python3-sphinx,
                python3-sphinx-rtd-theme,
                python3-sphinxcontrib-asyncio,
                python3-twisted,
-Standards-Version: 4.6.1
+Standards-Version: 4.7.0
 Homepage: https://www.tornadoweb.org/
 Vcs-Git: https://salsa.debian.org/python-team/packages/python-tornado.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/python-tornado
