@@ -1,3 +1,27 @@
+python-tornado (6.2.0-3+pexip24u5+deb12u1) pexip; urgency=medium
+
+  * New upstream release
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Mon, 13 Jan 2025 14:18:42 +0000
+
+python-tornado (6.2.0-3+deb12u1) bookworm; urgency=medium
+
+  * Non-maintainer upload by the Debian LTS team.
+  * d/patches/CVE-2024-52804.patch: Fix CVE-2024-52804 (closes: #1088112).
+    - The algorithm used for parsing HTTP cookies in Tornado versions prior to
+      6.4.2 sometimes has quadratic complexity, leading to excessive CPU
+      consumption when parsing maliciously-crafted cookie headers. This
+      parsing occurs in the event loop thread and may block the processing of
+      other requests.
+  * d/patches/CVE-2023-28370-1.patch,
+    d/patches/CVE-2023-28370-2.patch: Fix CVE-2023-28370 (closes: #1036875).
+    - Open redirect vulnerability in Tornado versions 6.3.1 and earlier allows
+      a remote unauthenticated attacker to redirect a user to an arbitrary web
+      site and conduct a phishing attack by having user access a specially
+      crafted URL.
+
+ -- Daniel Leidert <dleidert@debian.org>  Tue, 31 Dec 2024 01:53:59 +0100
+
 python-tornado (6.2.0-3+pexip24u4) pexip-bookworm; urgency=medium
 
   * New versioning scheme
