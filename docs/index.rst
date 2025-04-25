@@ -32,8 +32,7 @@ Hello, world
 Here is a simple "Hello, world" example web app for Tornado::
 
     import asyncio
-
-    import tornado.web
+    import tornado
 
     class MainHandler(tornado.web.RequestHandler):
         def get(self):
@@ -100,7 +99,7 @@ installed in this way, so you may wish to download a copy of the
 source tarball or clone the `git repository
 <https://github.com/tornadoweb/tornado>`_ as well.
 
-**Prerequisites**: Tornado 6.2 requires Python 3.7 or newer. The following
+**Prerequisites**: Tornado 6.3 requires Python 3.8 or newer. The following
 optional packages may be useful:
 
 * `pycurl <http://pycurl.io/>`_ is used by the optional

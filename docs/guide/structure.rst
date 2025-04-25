@@ -2,7 +2,7 @@
 
 .. testsetup::
 
-   import tornado.web
+   import tornado
 
 Structure of a Tornado web application
 ======================================
@@ -17,8 +17,7 @@ A minimal "hello world" example looks something like this:
 .. testcode::
 
     import asyncio
-
-    import tornado.web
+    import tornado
 
     class MainHandler(tornado.web.RequestHandler):
         def get(self):
@@ -177,7 +176,7 @@ handle files that are too large to comfortably keep in memory see the
 `.stream_request_body` class decorator.
 
 In the demos directory,
-`file_receiver.py <https://github.com/tornadoweb/tornado/tree/master/demos/file_upload/>`_
+`file_receiver.py <https://github.com/tornadoweb/tornado/tree/stable/demos/file_upload/>`_
 shows both methods of receiving file uploads.
 
 Due to the quirks of the HTML form encoding (e.g. the ambiguity around
