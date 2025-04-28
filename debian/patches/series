@@ -4,6 +4,4 @@ ignoreuserwarning.patch
 0007-Higher-test_gc-timeout.patch
 pythonpath-autoreload-test.patch
 disable-should-be-failing-test.patch
-disable-privilege-port-test.diff
-pexip_fixup_deprecated_twisted.diff
 pexip_asyncio_cancelled.patch
