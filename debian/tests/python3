@@ -8,6 +8,8 @@ PYS=${PYS:-"$(py3versions -s 2>/dev/null)"}
 cd "$AUTOPKGTEST_TMP"
 # subprocess tests get unexpected output if $HOME/.python_history is not readable
 export HOME=$AUTOPKGTEST_TMP
+# See discussion in https://bugs.debian.org/965041.
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 
 for py in $PYS; do
     echo "=== $py ==="

@@ -5,13 +5,14 @@ Subject: ignore userwarning in tests
  Required to run tests from source with the package already installed.
  Else one gets check_version_conflict warning from pkg_resources.
 Patch-Name: ignoreuserwarning.patch
+Forwarded: not-needed
 ---
  tornado/test/runtests.py | 1 +
  1 file changed, 1 insertion(+)
 
 --- python-tornado.orig/tornado/test/runtests.py
 +++ python-tornado/tornado/test/runtests.py
-@@ -120,6 +120,7 @@
+@@ -121,6 +121,7 @@
      # setuptools sometimes gives ImportWarnings about things that are on
      # sys.path even if they're not being used.
      warnings.filterwarnings("ignore", category=ImportWarning)

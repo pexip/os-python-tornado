@@ -2,16 +2,16 @@ From: SVN-Git Migration <python-modules-team@lists.alioth.debian.org>
 Date: Thu, 8 Oct 2015 13:13:30 -0700
 Subject: Disable domain tests to prevent internet access during build
 
-Forwarded: Debian-specific
+Forwarded: not-needed
 ---
  tornado/test/netutil_test.py | 1 +
  1 file changed, 1 insertion(+)
 
 diff --git a/tornado/test/netutil_test.py b/tornado/test/netutil_test.py
-index f36b7c2..904521b 100644
+index b35b794..383d482 100644
 --- a/tornado/test/netutil_test.py
 +++ b/tornado/test/netutil_test.py
-@@ -52,6 +52,7 @@ class _ResolverTestMixin(object):
+@@ -59,6 +59,7 @@ class _ResolverTestMixin(object):
  class _ResolverErrorTestMixin(object):
      resolver = None  # type: typing.Any
  

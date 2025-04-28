@@ -1,12 +1,9 @@
 disable-domain-tests.patch
 ignoreuserwarning.patch
-fix-ftbfs-on-hurd.patch
 0006-Use-local-objects.inv-for-intersphinx-mapping.patch
 0007-Higher-test_gc-timeout.patch
+pythonpath-autoreload-test.patch
+disable-should-be-failing-test.patch
 disable-privilege-port-test.diff
-ignore-py310-deprecation-warnings.patch
-CVE-2024-52804.patch
-CVE-2023-28370-1.patch
-CVE-2023-28370-2.patch
 pexip_fixup_deprecated_twisted.diff
 pexip_asyncio_cancelled.patch
