@@ -1,3 +1,18 @@
+python-tornado (6.4.2-3) unstable; urgency=medium
+
+  * Team upload.
+  * Increase timeout on riscv64 to fix FTBFS issue. (Closes: #1106130)
+
+ -- Bo YU <vimer@debian.org>  Thu, 22 May 2025 21:16:28 +0800
+
+python-tornado (6.4.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * CVE-2025-47287: httputil: Raise errors instead of logging in
+    multipart/form-data parsing (closes: #1105886).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 18 May 2025 16:43:40 +0100
+
 python-tornado (6.4.2-1) unstable; urgency=medium
 
   * Team upload.

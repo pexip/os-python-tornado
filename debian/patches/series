@@ -4,3 +4,5 @@ ignoreuserwarning.patch
 0007-Higher-test_gc-timeout.patch
 pythonpath-autoreload-test.patch
 disable-should-be-failing-test.patch
+CVE-2025-47287.patch
+increase-timeout-rv64.patch
