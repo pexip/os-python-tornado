@@ -1,3 +1,15 @@
+python-tornado (6.2.0-3+deb12u2) bookworm-security; urgency=medium
+
+  * Non-maintainer upload by the Debian LTS team.
+  * d/patches/CVE-2025-47287.patch: Add patch to fix CVE-2025-47287.
+    - When Tornado's 'multipart/form-data' parser encounters certain errors,
+      it logs a warning but continues trying to parse the remainder of the
+      data. This allows remote attackers to generate an extremely high volume
+      of logs, constituting a DoS attack. This DoS is compounded by the fact
+      that the logging subsystem is synchronous (closes: #1105886).
+
+ -- Daniel Leidert <dleidert@debian.org>  Tue, 03 Jun 2025 13:27:39 +0200
+
 python-tornado (6.2.0-3+deb12u1) bookworm; urgency=medium
 
   * Non-maintainer upload by the Debian LTS team.
