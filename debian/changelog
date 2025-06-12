@@ -1,3 +1,8 @@
+python-tornado (6.4.2-3+pexip25u1) pexip-trixie; urgency=medium
+   * New upstream release
+
+ -- Huw Jones <huw@pexip.com>  Thu, 12 Jun 2025 11:41:06 +0100
+
 python-tornado (6.4.2-3) unstable; urgency=medium
 
   * Team upload.
