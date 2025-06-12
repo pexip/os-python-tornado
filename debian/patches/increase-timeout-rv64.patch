@@ -1,0 +1,29 @@
+Description: increase timeout on riscv64
+Author: Bo YU <vimer@debian.org>
+Bug: https://bugs.debian.org/1106130
+Forwarded: not-needed
+Last-Update: 2025-05-19
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/tornado/test/autoreload_test.py
++++ b/tornado/test/autoreload_test.py
+@@ -7,6 +7,7 @@
+ import textwrap
+ import time
+ import unittest
++import platform
+ 
+ 
+ class AutoreloadTest(unittest.TestCase):
+@@ -91,7 +92,10 @@
+         for i in range(40):
+             if p.poll() is not None:
+                 break
+-            time.sleep(0.1)
++            if platform.machine() == "riscv64":
++                time.sleep(1)
++            else:
++                time.sleep(0.1)
+         else:
+             p.kill()
+             raise Exception("subprocess failed to terminate")

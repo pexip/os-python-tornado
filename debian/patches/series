@@ -5,3 +5,5 @@ ignoreuserwarning.patch
 pythonpath-autoreload-test.patch
 disable-should-be-failing-test.patch
 pexip_asyncio_cancelled.patch
+CVE-2025-47287.patch
+increase-timeout-rv64.patch
