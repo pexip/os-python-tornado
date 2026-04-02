@@ -6,3 +6,7 @@ pythonpath-autoreload-test.patch
 disable-should-be-failing-test.patch
 CVE-2025-47287.patch
 increase-timeout-rv64.patch
+CVE-2025-67726.patch
+CVE-2025-67725.patch
+CVE-2025-67724.patch
+case-insensitive-http-headers.patch

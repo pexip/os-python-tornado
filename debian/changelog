@@ -1,3 +1,27 @@
+python-tornado (6.4.2-3+deb13u2) trixie-security; urgency=medium
+
+  * Backport 87a85bb4de18ab17c360f7cb530274202fd05d4c to fix a
+    regression in the fix for CVE-2025-67725, spotted by the
+    python-jaeger autopkgtest, with thanks to Thomas Goirand
+    in the help tracking this down.
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Thu, 02 Apr 2026 22:44:44 +0200
+
+python-tornado (6.4.2-3+deb13u1) trixie-security; urgency=medium
+
+  * Non-maintainer upload by the Debian LTS team.
+  * d/patches/CVE-2025-67726.patch: Add patch to fix CVE-2025-67726.
+    - Fix an inefficient algorithm when parsing parameters for HTTP header
+      values, potentially causing a DoS (closes: #1122663).
+  * d/patches/CVE-2025-67725.patch: Add patch to fix CVE-2025-67725.
+    - Fix possible DoS due to quadratic performance of repeated header
+      lines (closes: #1122661).
+  * d/patches/CVE-2025-67724.patch: Add patch to fix CVE-2025-67724.
+    - Fix multiple vulnerabilities caused by custom reason phrases being
+      used unescaped in HTTP headers (closes: #1122660).
+
+ -- Daniel Leidert <dleidert@debian.org>  Sun, 01 Feb 2026 00:34:03 +0100
+
 python-tornado (6.4.2-3) unstable; urgency=medium
 
   * Team upload.
