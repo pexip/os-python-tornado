@@ -1,3 +1,5 @@
+Catch asyncio.CancelledError in _execute routine
+
 diff --git a/tornado/web.py b/tornado/web.py
 index 546e6ec..f1fa0b3 100644
 --- a/tornado/web.py
